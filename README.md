@@ -1,4 +1,4 @@
-# cm2rend
+# cm2rend - v1.0
 
 cm2rend, or cm2 renderer, is a html embed meant for cm2 projects
 
