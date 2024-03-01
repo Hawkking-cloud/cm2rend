@@ -4,30 +4,41 @@ cm2rend, or cm2 renderer, is a html embed meant for cm2 projects
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
+- [Uses](#uses)
+- [Functions](#functions)
 
-## Introduction
+## Uses
 
-Provide a brief introduction to your project. Explain its purpose and give a high-level overview.
+1. You can render projects easily with this
+2. You can display projects on your own website
 
-## Features
+## Functions
 
-List the key features of your project. You can use bullet points for easy reading.
+### newgate(type,pos,special,on)
 
-- Feature 1
-- Feature 2
-- Feature 3
+This is mainly used for if you want to display a single block
+### Templates:
 
-## Installation
+Template 1 - Nor gate:
+```
+import * as cm2rend from './cm2rend.js';
+cm2rend.newgate(cm2rend.blocks.tile,cm2rend.newpos(0,0,0));
+```
 
-Provide instructions on how to install your project. Include any dependencies and how to set up the environment.
+Template 2 - Tile block with custom color:
+```
+import * as cm2rend from './cm2rend.js';
+cm2rend.newgate(cm2rend.blocks.tile,cm2rend.newpos(0,0,0),'255+200+15');
+```
 
-```bash
-# Example installation command
-npm install your-package-name
+Template 3 - Nor gate:
+```
+import * as cm2rend from './cm2rend.js';
+cm2rend.newgate(cm2rend.blocks.nor,cm2rend.newpos(0,0,0));
+```
+
+Template 4 - Powered Nor gate:
+```
+import * as cm2rend from './cm2rend.js';
+cm2rend.newgate(cm2rend.blocks.nor,cm2rend.newpos(0,0,0),'',1);
+```
