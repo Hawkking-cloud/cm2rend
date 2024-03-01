@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>cm2rend project</title>
+        
+		<style>
+			body {
+				overflow: hidden;
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="cm2render"></canvas>
+		<script type="importmap">
+			{
+              "imports": {
+                "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
+              }}
+		</script>
+		<script type="module">
+			import * as cm2rend from './cm2rend.js';
+			cm2rend.settings.glow=false;
+			cm2rend.settings.showfps=true;
+			
+			
+			fetch('message.txt')
+				.then(response => {
+					return response.text();
+				})
+				.then(data => {
+					cm2rend.loadstring(data);
+				})
+			
+		</script> 
+	</body>
+</html>
